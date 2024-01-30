@@ -8,7 +8,7 @@ class Rectangle:
     """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
         """initializing the rectangle by
-        setting the object with width and height
+        setting the objet with width and height
         """
         self.width = width
         self.height = height
@@ -36,12 +36,14 @@ class Rectangle:
     def height(self, value):
         """setter for the private instance attribute height"""
         if type(value) is not int:
-            raise TypeError("height must be >= 0")
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
         """returns the area of the rectangle"""
-        return self.__width * self__height
+        return self.__width * self.__height
 
     def perimeter(self):
         """returns the perimeter of the rectangle"""

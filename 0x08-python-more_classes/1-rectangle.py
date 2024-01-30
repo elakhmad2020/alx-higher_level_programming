@@ -3,11 +3,12 @@
 Defines a class Rectangle
 """
 
+
 class Rectangle:
     """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
         """initializing the rectangle by
-        setting the object with width and height
+        setting the objet with width and height
         """
         self.height = height
         self.width = width

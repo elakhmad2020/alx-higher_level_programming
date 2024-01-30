@@ -23,7 +23,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initializing the rectangle by
-        setting the object with width and height
+        settin the objet with width and height
         """
         self.width = width
         self.height = height
@@ -77,8 +77,8 @@ class Rectangle:
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join(str(self.print_symbol) * self.__width
-                    for j in range(self.__height))
-            return string
+                                for j in range(self.__height))
+        return string
 
     def __repr__(self):
         """returns a string representation of the rectangle for reproduction"""

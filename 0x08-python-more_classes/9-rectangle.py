@@ -12,7 +12,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """returns a new Rectangle instance that is square w/ h==w==size"""
+        """returns a new Rectangle instance that is a square w/ h==w==size"""
         return cls(size, size)
 
     @staticmethod
@@ -28,11 +28,11 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initializing the rectangle by
-        setting the object with width and height
+        setting the objet with width and height
         """
         self.width = width
         self.height = height
-        Rectangle.number_of_intstances += 1
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         """prints a string when an instance has been deleted"""
@@ -40,7 +40,7 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
 
     @property
-    def width(sel):
+    def width(self):
         """getter for the private instance attribute width"""
         return self.__width
 
@@ -72,7 +72,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """returns the perimeter of the Rectangle"""
+        """returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
@@ -80,12 +80,11 @@ class Rectangle:
     def __str__(self):
         """returns printable string representation of the rectangle"""
         string = ""
-        if self,__width != 0 and self.__height != 0:
-            string += "\n".joi(str(self.print_symbol) * self.__width
-                    for j in range(self.__height))
-            return string
+        if self.__width != 0 and self.__height != 0:
+            string += "\n".join(str(self.print_symbol) * self.__width
+                                for j in range(self.__height))
+        return string
 
     def __repr__(self):
         """returns a string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-

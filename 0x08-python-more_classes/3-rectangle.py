@@ -7,7 +7,8 @@ Defines a class Rectangle
 class Rectangle:
     """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
-        """initializing the rectangle by setting the object with width and height
+        """initializing the rectangle by
+        setting the objet with width and height
         """
         self.width = width
         self.height = height
@@ -46,14 +47,14 @@ class Rectangle:
 
     def perimeter(self):
         """returns the perimeter of the rectangle"""
-        if self.__width == 0 or self.__height ==  0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return(self.__width * 2) + (self.__height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join("#" * self.__width
-                    for j in range(self.__height))
-            return string
+                                for j in range(self.__height))
+        return string
